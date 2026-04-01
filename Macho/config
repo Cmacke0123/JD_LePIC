@@ -1,0 +1,8 @@
+#!/bin/sh
+
+gfortran -O3 -frecord-marker=4 -o convert.exe convert.f90 #-fbounds-check
+
+
+
+
+

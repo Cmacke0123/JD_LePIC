@@ -1,0 +1,10 @@
+ 0    26.  6. ! xmin, xmax, ymax; x,y,V (>0 Dirichlet, -2 Neumann, 0 or -3 periodic, <=-4 dielectric)
+ 0.   0.   -4
+ 0.   6.   -4
+ 0.   6.   1
+ 26.  6.   1
+ 26.  6.   2
+ 26.  0.   2.
+ 
+
+ 

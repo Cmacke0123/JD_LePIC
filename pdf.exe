@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cd distrib_function/
+./pdf.exe ; gnuplot plot.gnu
+
+cd ..

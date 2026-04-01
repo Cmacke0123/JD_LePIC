@@ -1,0 +1,83 @@
+IONS
+name   mass  charge  temp.(eV)  n/n0
+-------------------------------------
+[H2+]    2.     1.     2.        1.
+[H-]     1.    -1.     0.1       0.
+-------------------------------------
+
+NEUTRALS
+name   mass  charge  temp.(eV)  n/n0
+-------------------------------------
+[H2]     2.d0   0.     0.1       0.8
+[H]      1.d0   0.     1.        0.2
+-------------------------------------
+
+REACTION
+[e]+[H2]->[e]+[H2]
+ 0.    0.  
+ 1.    1.
+COLLISION
+Note that the code reads in order:
+(1) Eth   dE
+(2) scale scale
+(3) type of collision
+Eth= threshold energy of reaction
+dE= energy gained by heavy byproduct particles
+scale= multiplicative factor for columns
+Byproduct electrons share the remaining incident electron energy 
+------------------------------------------------------------
+  0.0000E+00  1.40E-19
+  0.1000E+01  1.40E-19
+  0.1000E+05  1.40E-19
+  0.1010E+05  0.0000E-00
+------------------------------------------------------------
+
+REACTION
+[H-]+[H2]->[e]+[H]+[H2]
+0.  0.
+1  1. 
+IONIZATION
+----------------------
+  0.0000E+00  6.2000E-20
+  0.1000E+01  6.2000E-20
+  0.1000E+05  6.2000E-20
+  0.1010E+05  0.0000E-00
+-----------------------
+
+
+REACTION
+[H-]+[H2]->[H-]+[H2]
+0.      0.
+1.      1. 
+COLLISION
+Entry #52
+H- + H2 -> H- + H2, (Elastic ?? -not clear) momentum transfer, threshold energy: 0V
+Phelps, 1990, J. Phys. Chem. Ref. Data, vol.19, p. 653;  Table 12, Qm (momentum transfer)
+in the range (0-0.1) eV -> extrapolated
+Energy (eV) (H- energy in the laboratory system, H2 at rest), crosssection in [m^2]
+----------------------
+  0.0000E+00  6.2000E-20
+  0.1000E+01  6.2000E-20
+  0.1000E+05  6.2000E-20
+  0.1010E+05  0.0000E-00
+-------------------------
+
+
+REACTION
+[H-]+[H]->[H]+[H-]
+0.  0.
+1.  1.
+CHARGEEXCHANGE
+REDBOOK data
+http://www-cfadc.phy.ornl.gov/redbooks/one/a/1a20.html
+--------------------------
+  0.0000E+00  1.3000E-18
+  0.1000E+01  1.3000E-18
+  0.1000E+05  1.3000E-18
+  0.1010E+05  0.0000E-00
+--------------------------
+
+ENDFILE
+
+
+

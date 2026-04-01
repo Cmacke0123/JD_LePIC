@@ -1,0 +1,169 @@
+*** Start calculation ... ***
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ +                                                                          +
+ + 2.5D-3V explicit parallel particle in cell code                          +
+ +                                                                          +
+ + LePIC 2.5D algorithm version: 4.6.7                                      +
+ + Last modifications: November/2023                                        +
+ +                                                                          +
+ + Copyright or © or Copr. Gwenael Fubiani (2022/11/22)                     +
+ +                                                                          +
+ + gwenael.fubiani@cnrs.fr                                                  +
+ +                                                                          +
+ + This software is a computer program whose purpose is to model low        +
+ + temperature plasmas with a Particle-In-Cell algorihm in 2.5D-3V          +
+ + dimensions.                                                              +
+ +                                                                          +
+ + This software is governed by the CeCILL-C license under French law and   +
+ + abiding by the rules of distribution of free software.  You can  use,    +
+ + modify and/ or redistribute the software under the terms of the CeCILL-C +
+ + license as circulated by CEA, CNRS and INRIA at the following URL        +
+ + "http://www.cecill.info".                                                +
+ +                                                                          +
+ + As a counterpart to the access to the source code and  rights to copy,   +
+ + modify and redistribute granted by the license, users are provided only  +
+ + with a limited warranty and the software's author, the holder of the     +
+ + economic rights,  and the successive licensors  have only  limited       +
+ + liability.                                                               +
+ +                                                                          +
+ + In this respect, the user's attention is drawn to the risks associated   +
+ + with loading,  using,  modifying and/or developing or reproducing the    +
+ + software by the user in light of its specific status of free software,   +
+ + that may mean  that it is complicated to manipulate,  and  that  also    +
+ + therefore means  that it is reserved for developers  and  experienced    +
+ + professionals having in-depth computer knowledge. Users are therefore    +
+ + encouraged to load and test the software's suitability as regards their  +
+ + requirements in conditions enabling the security of their systems and/or +
+ + data to be ensured and,  more generally, to use and operate it in the    +
+ + same conditions as regards security.                                     +
+ +                                                                          +
+ + The fact that you are presently reading this means that you have had     +
+ + knowledge of the CeCILL-C license and that you accept its terms.         +
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                  
+ Number of OpenMP threads=  16
+ Number of MPI threads=   4
+ Input file was read correctly ...
+ eps0 HAS BEEN RE-SCALED: k_eps0=   36000.0000000000     
+ Gas chemistry read correctly (end of file reached)
+ Total number of reactions:          61
+ Updated hole radius (cm):    0.91 cm
+ Gaussian magnetic filter field profile
+ Frequency of calls to collision subroutine=  10
+ Frequency of calls to electron heating subroutine=   4
+ Electron velocity sampled from a Maxwellian: velocity is replaced
+ Frequency of calls to sort subroutine=  10
+ Heating region (cm): x<=   0.0, x>=  16.0, y<=   0.0, y>=  58.0
+ Particle loading region: nx<=   129
+ Loading particles ...
+ Particles: [e]   [H2+] [H-]  [H3+] [H+] 
+ np=    379328    170668         0     94530    113460
+ lde (mm)=   6.30790928233794     
+ lpe (mm)=   10708.4415408690     
+ vt (m/s)=   1569187.13117733       0.000000000000000E+000
+  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
+ <|v|> (m/s)=   1770638.06809487     
+ dx (mm)=   3.12500000000000      dx/lde=  0.495409787954617     
+ dy (mm)=   3.02083333333333      dy/lde=  0.478896128356130     
+ Nm=   52864583333.3333     
+ dt (s)=  5.775283151347667E-010 , wpe*dt=  0.101589209953381     
+ vte*dt/dx=  0.300000000000000     
+ Bm(G)=    75., wc*dt=  0.76, wc (/s)=   1.3191E+09, re (mm)=  1.19
+ err: w*/wc=  0.96, r*/re=  1.07
+ Multigrid PDE Solver is used, eps=   1.00E-08
+ ng=  7
+ nx=  128, ny=  192 # of cells:    18966
+ Frequency for averaging=  50
+ Absorbed power profile is flattop
+ Particle flux emmited on grid located at xg= 40.00 cm, ig=   4
+ Source/sink plotting option on
+ *** Startup time (s):   0.3 ***
+  
+ Running simulation ...
+ Particle current generated on the electrode: Isurf(A)=   5.34E+01, jsurf(A/m2)=  600.0
+ it=        1, t (us)=    0.0, np=    377794     170663         16      94528     113452
+ Pwall (W)=  -2.73E+05, Pabs (W)=   0.00E+00, Pcoll (W)=   0.00E+00, Pinj (W)=   6.22E+02, I_w (A)=  -2.24E+04    2.20E+02  , Ek_w (eV)=   1.41E+01    6.36E-07
+ Backing up simulation data ...
+ Done!
+ it=     2501, t (us)=    1.4, np=    318274     166537       4894      90985      91914
+ Pwall (W)=  -3.41E+04, Pabs (W)=   6.07E+04, Pcoll (W)=  -2.74E+04, Pinj (W)=   9.60E+01, I_w (A)=  -8.06E+02    6.62E+02  , Ek_w (eV)=   3.45E+01    1.07E+01
+ Neg. ion current lost through collisions (A)= -2.06E+00
+ <t> (ms): E/rho=     0.5, poisson=    10.9, sorting=     0.2, avg/write=     1.3, MC=     1.8, mover=     1.4, bck=     0.0, total=    16.2
+ Backing up simulation data ...
+ Done!
+ it=     5001, t (us)=    2.9, np=    325777     174267       7658      91870      88932
+ Pwall (W)=  -2.95E+04, Pabs (W)=   6.02E+04, Pcoll (W)=  -3.01E+04, Pinj (W)=   1.05E+02, I_w (A)=  -5.03E+02    5.32E+02  , Ek_w (eV)=   4.35E+01    1.61E+01
+ Neg. ion current lost through collisions (A)= -3.28E+00
+ <t> (ms): E/rho=     0.5, poisson=    10.6, sorting=     0.2, avg/write=     1.2, MC=     1.8, mover=     1.5, bck=     0.0, total=    16.0
+ Backing up simulation data ...
+ Done!
+ it=     7501, t (us)=    4.3, np=    335045     179340      12198      93895      93945
+ Pwall (W)=  -2.73E+04, Pabs (W)=   6.05E+04, Pcoll (W)=  -3.17E+04, Pinj (W)=   1.12E+02, I_w (A)=  -4.85E+02    4.93E+02  , Ek_w (eV)=   4.02E+01    1.69E+01
+ Neg. ion current lost through collisions (A)= -4.92E+00
+ <t> (ms): E/rho=     0.5, poisson=    10.5, sorting=     0.2, avg/write=     1.3, MC=     1.9, mover=     1.6, bck=     0.0, total=    16.0
+ Backing up simulation data ...
+ Done!
+ it=    10001, t (us)=    5.8, np=    343080     182636      16671      95749     100321
+ Pwall (W)=  -2.66E+04, Pabs (W)=   6.04E+04, Pcoll (W)=  -3.29E+04, Pinj (W)=   1.12E+02, I_w (A)=  -4.85E+02    4.89E+02  , Ek_w (eV)=   3.80E+01    1.74E+01
+ Neg. ion current lost through collisions (A)= -7.37E+00
+ <t> (ms): E/rho=     0.5, poisson=    10.5, sorting=     0.2, avg/write=     1.3, MC=     1.9, mover=     1.7, bck=     0.0, total=    16.1
+ Backing up simulation data ...
+ Done!
+ it=    12501, t (us)=    7.2, np=    346528     182596      20333      97296     105631
+ Pwall (W)=  -2.63E+04, Pabs (W)=   5.94E+04, Pcoll (W)=  -3.29E+04, Pinj (W)=   1.10E+02, I_w (A)=  -4.94E+02    4.95E+02  , Ek_w (eV)=   3.65E+01    1.75E+01
+ Neg. ion current lost through collisions (A)= -8.95E+00
+ <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     1.9, mover=     1.8, bck=     0.0, total=    16.1
+ Backing up simulation data ...
+ Done!
+ it=    15001, t (us)=    8.7, np=    348395     181435      23229      99019     109858
+ Pwall (W)=  -2.62E+04, Pabs (W)=   5.96E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   1.07E+02, I_w (A)=  -4.99E+02    4.99E+02  , Ek_w (eV)=   3.59E+01    1.74E+01
+ Neg. ion current lost through collisions (A)= -1.05E+01
+ <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     1.9, mover=     1.8, bck=     0.0, total=    16.2
+ Backing up simulation data ...
+ Done!
+ it=    17501, t (us)=   10.1, np=    351112     181198      25124     100141     112875
+ Pwall (W)=  -2.67E+04, Pabs (W)=   6.04E+04, Pcoll (W)=  -3.36E+04, Pinj (W)=   1.13E+02, I_w (A)=  -5.12E+02    5.13E+02  , Ek_w (eV)=   3.59E+01    1.74E+01
+ Neg. ion current lost through collisions (A)= -1.05E+01
+ <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     1.9, mover=     1.9, bck=     0.0, total=    16.3
+ Backing up simulation data ...
+ Done!
+ it=    20001, t (us)=   11.6, np=    353340     180186      25034     100695     115748
+ Pwall (W)=  -2.64E+04, Pabs (W)=   6.01E+04, Pcoll (W)=  -3.34E+04, Pinj (W)=   1.13E+02, I_w (A)=  -5.23E+02    5.18E+02  , Ek_w (eV)=   3.55E+01    1.71E+01
+ Neg. ion current lost through collisions (A)= -1.16E+01
+ <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     1.9, mover=     1.9, bck=     0.0, total=    16.3
+ Backing up simulation data ...
+ Done!
+ it=    22501, t (us)=   13.0, np=    353628     177822      25340     101106     118011
+ Pwall (W)=  -2.66E+04, Pabs (W)=   5.93E+04, Pcoll (W)=  -3.34E+04, Pinj (W)=   1.03E+02, I_w (A)=  -5.18E+02    5.22E+02  , Ek_w (eV)=   3.52E+01    1.74E+01
+ Neg. ion current lost through collisions (A)= -1.12E+01
+ <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     1.9, mover=     1.9, bck=     0.0, total=    16.3
+ Backing up simulation data ...
+ Done!
+ it=    25001, t (us)=   14.4, np=    352268     175539      25709     101148     119336
+ Pwall (W)=  -2.63E+04, Pabs (W)=   5.89E+04, Pcoll (W)=  -3.28E+04, Pinj (W)=   1.01E+02, I_w (A)=  -5.16E+02    5.19E+02  , Ek_w (eV)=   3.48E+01    1.71E+01
+ Neg. ion current lost through collisions (A)= -1.14E+01
+ <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     2.0, mover=     2.0, bck=     0.0, total=    16.4
+ Backing up simulation data ...
+ Done!
+ it=    27501, t (us)=   15.9, np=    351873     174818      26325     101455     119983
+ Pwall (W)=  -2.64E+04, Pabs (W)=   5.96E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   1.09E+02, I_w (A)=  -5.21E+02    5.20E+02  , Ek_w (eV)=   3.50E+01    1.71E+01
+ Neg. ion current lost through collisions (A)= -1.15E+01
+ <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     2.0, mover=     2.0, bck=     0.0, total=    16.4
+ Backing up simulation data ...
+ Done!
+ it=    30001, t (us)=   17.3, np=    351429     174485      27148     101388     120611
+ Pwall (W)=  -2.64E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   1.12E+02, I_w (A)=  -5.19E+02    5.17E+02  , Ek_w (eV)=   3.52E+01    1.70E+01
+ Neg. ion current lost through collisions (A)= -1.18E+01
+ <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     2.0, mover=     2.0, bck=     0.0, total=    16.4
+ Backing up simulation data ...
+ Done!
+ it=    32501, t (us)=   18.8, np=    352305     175374      28066     101525     121718
+ Pwall (W)=  -2.68E+04, Pabs (W)=   6.07E+04, Pcoll (W)=  -3.36E+04, Pinj (W)=   1.06E+02, I_w (A)=  -5.23E+02    5.21E+02  , Ek_w (eV)=   3.52E+01    1.73E+01
+ Neg. ion current lost through collisions (A)= -1.21E+01
+ <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     2.0, mover=     2.0, bck=     0.0, total=    16.5
+ Backing up simulation data ...
+ Done!
+ it=    35001, t (us)=   20.2, np=    350742     173568      29146     101800     122545
+ Pwall (W)=  -2.66E+04, Pabs (W)=   5.90E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   1.06E+02, I_w (A)=  -5.21E+02    5.22E+02  , Ek_w (eV)=   3.49E+01    1.71E+01
+ Neg. ion current lost through collisions (A)= -1.22E+01
+ <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     2.0, mover=     2.0, bck=     0.0, total=    16.5

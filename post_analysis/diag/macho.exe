@@ -1,0 +1,10 @@
+#!/bin/sh
+
+./diag.exe
+perl -i -pe 's/\n/\r\n/;' *.mco 
+#unix2dos *.mco
+rm -f *~ DATA_mco/*
+mv *.mco DATA_mco/
+
+
+

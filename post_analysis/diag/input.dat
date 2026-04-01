@@ -1,0 +1,5 @@
+1    ! opt (0: e/i; 1: H2; 2: H2/Bz; 3: e/i/Bz)
+0.833 0.833  ! dx dy (mm)
+256  ! Grid size
+-200 ! iy for 1D plot (<0 == off)
+END

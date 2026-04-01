@@ -1,0 +1,11 @@
+ 0   40.  29 ! xmin, xmax, ymax		
+ 0    0     1 ! x,y,V (>0 Dirichlet, -2 Neumann, 0 or -3 periodic, <=-4 dielectric)
+ 0  12.25   1
+ 0  12.25   1
+16  12.25   1
+16  12.25   2
+16   29     2
+16   29     2
+40   29     2
+40   29     3
+40    0     3

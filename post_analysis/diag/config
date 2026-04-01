@@ -1,0 +1,9 @@
+#!/bin/sh
+
+gfortran -O3 -frecord-marker=4 -o diag.exe diag.f90 #-fbounds-check
+rm -f *~
+
+
+
+
+

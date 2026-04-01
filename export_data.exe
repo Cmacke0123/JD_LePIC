@@ -1,0 +1,9 @@
+#!/bin/sh
+
+rm -f Macho/*.mco; rm -f Macho/*.*~
+rsync -av DATA DATA.BAK Src beamlet_properties input_dir Macho* distrib_function post_analysis 1d_profiles run* $1
+
+
+
+
+

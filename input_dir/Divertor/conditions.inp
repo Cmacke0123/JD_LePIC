@@ -1,0 +1,33 @@
+special.dat 0 0.9 ! name of file storing reactions, ionization scheme (0: preserve energy & mom, 1: fixed repartition), Ek ratio for elec.
+47. ! Te (eV) 
+8 ! # of levels in MG solver
+1.d-7 ! Min. precision in residual
+1280 80 2 ! n: nx=2**n, ny=2**n. Number of grid points [2**7,2**3], opt_solver: 1 (MG), 2 (Pardiso)
+0. 0.128 0. 100. ! Particle heating/injection region x<, x>[cm] (<0 for a disk), y<, y>
+0.128 ! Particle loading region [cm]
+4 ! # of magnetic field files (<0 positive ions not magnetized)
+1 64 ! Grid for the magnetic field map
+n gauss 1. 2.0789e4 Bx 8.d10 0.5 0. ! ext. file (y/n/s), name, scaling, B(G)(<0 mirror), dir, L(cm)(<0 -B LHS), x0(cm), y0(cm) or B(T) @ x0
+n gauss 1. 2.0789e4 By 8.d10 0.5 0. ! ext. file (y/n/s), name, scaling, B(G)(<0 mirror), dir, L(cm)(<0 -B LHS), x0(cm), y0(cm) or B(T) @ x0
+s ext 1. 400. By 2.5 5. 0. ! ext. file (y/n/s), name, scaling, B(G)(<0 mirror), dir, L(cm)(<0 -B LHS), x0(cm), y0(cm) or B(T) @ x0
+s 2Dzoom512_32 1. 75. Bz 8. 39. 0. ! ext. file (y/n/s), name, scaling, B(G)(<0 mirror), dir, L(cm)(<0 -B LHS), x0(cm), y0(cm) or B(T) @ x0
+1 -1.d3 -1.d8 ! # of drivers (<0 = iterative P), Pabs(W) (n times, <0 for a fixed Te), heat. freq. (<0 == off)
+50.736964 4 ! ! Inject current I(A) (<0 == off), options (1=fixed, 2= equal to ion losses, 3= beam along Z, 4= flux/refluxing, <0= gaussian)
+33.d-8 ! t_max(s)
+0.32  ! time coeff. k ; dt= k*dx/vt
+8.4d19 ! n0 (m-3)
+0.d0 ! ng (m-3)
+-70 ! np_cell: number of particles per cell (<0 for no background plasma)
+6 ! Number of wall labels
+2500 ! Frequency for saving data (<0 does not reset averaging)
+2500 -100 0.d-6 5.e-6 ! Frequency for simulation backup (<0 no averaging), # of plots (<0 off), time window [t1,t2]
+1 ! Size ratio of arrays used for saving data
+1.d0 ! k_eps0 (<0 to calculate source/sink from cross sections)
+no 1 0. 0.008  1  0. 0.128 ! Save pdf (y/n), ptype, yl & yr (cm), # of regions n_rg, xl & xr (cm) for each n_rg
+no 14 2 1 ! Restart (yes/no/external),  # of OMP threads, # of MPI, # for particle duplication
+no 0.128 0.128 0.008 0. 0 n 2 ! PG (y/n), x1/x2/Lg/Lh (cm), # holes, sum index (y/n), index (if not)
+0. 1 23.5 3 ! |js|(mA/cm2), ptype, Tbeam(eV) (<0 Te for e-ion pair injection), part. moments on grid #[index] (<0 for phase-space)
+-0.57 100. 0. 1  1.d-6 ! h=ns/<n> [<0 length=1m and no losses], length in 3rd dim (cm), bias(V), opts (1=metal, 2=floating), capacitance (F/m2)
+-0.1 2 ! Secondary emission coeff (<0 == off), grid index (<0, fixed current instead)
+END
+

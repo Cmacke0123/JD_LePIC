@@ -1,0 +1,30 @@
+#!/bin/bash
+#SBATCH -N 2
+#SBATCH -n 4
+#SBATCH --ntasks-per-node=2
+#SBATCH --threads-per-core=1
+#SBATCH --cpus-per-task=18
+#SBATCH --mail-user=fubiani@laplace.univ-tlse.fr
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-type=ALL
+#SBATCH -t 24:00:00
+
+module unload intelmpi
+module unload intel
+module load intel/17.1
+module load intelmpi/17.1
+
+rm -f DATA/*
+
+export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
+
+export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
+export OMP_PROC_BIND=true
+echo "$(placement ${SLURM_NTASKS_PER_NODE} ${SLURM_CPUS_PER_TASK} )"
+
+srun $(placement ${SLURM_NTASKS_PER_NODE} ${SLURM_CPUS_PER_TASK} ) ./2dphpic.exe > run.dump
+
+infoincidentjob
+

@@ -1,0 +1,32 @@
+zoom_b.dat 0 0.9 ! name of file storing reactions, ionization scheme (0: preserve energy & mom, 1: fixed repartition), Ek ratio for elec.
+2. ! Te (eV) 
+6 ! # of levels in MG solver
+1.d-7 ! Min. precision in residual
+256 128 1 ! n: nx=2**n, ny=2**n. Number of grid points [2**7,2**3], opt_solver: 1 (MG), 2 (Pardiso)
+0. 0.2 0. 100. ! Particle heating/injection region x<, x>[cm] (<0 for a disk), y<, y>
+2.65 ! Particle loading region [cm]
+-3 ! # of magnetic field files (<0 positive ions not magnetized)
+128 64 ! Grid for the magnetic field map
+n gauss 1. 75. Bz 8.d10 0.5 0. ! ext. file (y/n/s), name, scaling, B(G)(<0 mirror), dir, L(cm)(<0 -B LHS), x0(cm), y0(cm) or B(T) @ x0
+n ext 1. 600. By 1.6 3.2 0.8 ! ext. file (y/n/s), name, scaling, B(G)(<0 mirror), dir, L(cm)(<0 -B LHS), x0(cm), y0(cm) or B(T) @ x0
+s 2Dzoom512_32 1. 75. Bz 8. 39. 0. ! ext. file (y/n/s), name, scaling, B(G)(<0 mirror), dir, L(cm)(<0 -B LHS), x0(cm), y0(cm) or B(T) @ x0
+1 -60.d3 2.d9 ! # of drivers (<0 = iterative P), Pabs(W) (n times, <0 for a fixed Te), heat. freq. (<0 == off)
+1.37d0 1 ! ! Inject current I(A) (<0 == off), options (1=fixed, 2= equal to ion losses, 3= beam along Z, <0= gaussian)
+1.d-2 ! t_max(s)
+0.5  ! time coeff. k ; dt= k*dx/vt
+3.d17 ! n0 (m-3)
+5.d19 ! ng (m-3)
+40 ! np_cell: number of particles per cell (<0 for no background plasma)
+5 ! Number of wall labels
+2500 ! Frequency for saving data (<0 does not reset averaging)
+2500 -100 500.d-6 600.e-6 ! Frequency for simulation backup (<0 no averaging), # of plots (<0 off), time window [t1,t2]
+1 ! Size ratio of arrays used for saving data
+64.d0 ! k_eps0 
+no 3 0. 1.6  1  0. 3.2 ! Save pdf (y/n), ptype, yl & yr (cm), # of regions n_rg, xl & xr (cm) for each n_rg
+no 14 2 1 ! Restart (yes/no/external/gauss),  # of OMP threads, # of MPI, # for particle duplication
+no 2.45 2.85 1.6 0.8 1 n 2 ! particle flux off a surface : draw segment (y/n), x1/x2/Lg/Lh (cm), # holes, sum index (y/n), wall index
+60. 3 1. 2 ! |js|(mA/cm2), ptype, Tbeam(eV) (<0 Te for e-ion pair injection), part. moments on grid #[index] (<0 for phase-space)
+-0.57 32. 0. 1  1.d-6 ! h=ns/<n> [<0 length=1m and no losses], length in 3rd dim (cm), bias(V), opts (1=metal, 2=floating), capacitance (F/m2)
+-0.1 2 ! Secondary emission coeff (<0 == off), grid index (<0, fixed current instead)
+END
+

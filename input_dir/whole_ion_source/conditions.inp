@@ -1,0 +1,30 @@
+hydrogen2.dat ! name of file storing reactions
+7. ! Te (eV) 
+11 ! # of levels in MG solver
+1.d-7 ! Min. precision in residual
+2048 3072 ! n: nx=2**n, ny=2**n. Number of grid points [2**7,2**3]
+0. 16. ! Particle heating/injection region x<, x>[cm] (<0 for a disk)
+40. ! Particle loading region [cm]
+3 ! # of magnetic field files (<0 positive ions not magnetized)      
+n gauss 1. 75. Bz 8. 39. ! ext. file (y/n/s), name, scaling, B(G), direction, L(cm), x0 (cm)
+s ext 1. 50. Bz 2. 4. ! ext. file (y/n/s), name, scaling, B(G), direction, L(cm),x0 (cm)
+y supp3D2048 0.6 75. Bz 8. 39. ! ext. file (y/n/s), name, scaling, B(G), direction, Lx(m),x0 (cm)
+1 60.d0 1.d8 ! # of drivers, Pabs(W) (n times, <0 for a fixed Te), heating freq. (<0 == off)
+-5. 2 ! ! Inject current I(A) (<0 == off), options (1=fixed, 2= equal to ion losses , <0= gaussian)
+1.d-2 ! t_max(s)
+0.5  ! time coeff. k ; dt= k*dx/vt
+3.5d17 ! n0 (m-3)
+5.d19 ! ng (m-3)
+40 ! np_cell: number of particles per cell
+5 ! Number of wall labels
+-2500 ! Frequency for saving data (<0 does not reset averaging)
+2500 ! Frequency for simulation backup
+1 ! Size ratio of arrays used for saving data
+100.d0 ! k_eps0 
+no 3 19. 39. 3 0. 16. 24. 28. 33. 37. ! Save pdf (y/n), ptype, yl & yr (cm), # of regions n_rg, xl & xr (cm) for each n_rg
+ext 10 4 ! Restart simulation (yes/no/external),  # of OMP threads, # of MPI
+yes 40. 40.3 27.8 1.52 7 n 5 ! PG (y/n), x1/x2/Lg/Lh (cm), # holes, sum index (y/n), index (if not)
+60. 1. 3 ! jH-(mA/cm2) from H, TH-(eV), characteristics of neg. ions on grid # [index]
+0.57 32. 0. ! h=ns/<n> & length in 3rd dim (cm) [h<0 Length=1m and no losses], bias(V)
+END
+

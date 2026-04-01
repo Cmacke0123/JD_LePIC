@@ -1,0 +1,8 @@
+#!/bin/sh
+
+ifort -O3 -o beamlet.exe beamlet.f90
+rm -f *~
+
+
+
+

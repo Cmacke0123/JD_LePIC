@@ -1,0 +1,10 @@
+#!/bin/sh
+
+rm -rfI DATA/* DATA.BAK/* DATA.BAK2/* SAV_DATA/* Macho/DATA_1D/* Macho/DATA_mco/* Macho/DATA_seq/* Macho_zoom/DATA_1D/* Macho_zoom/DATA_mco/* post_analysis/pressure/DATA_mco/* post_analysis/pressure_zoom/DATA_mco/*
+
+echo 'remove magnetic field files?'
+rm -rfI mag_field_files/*
+
+
+
+

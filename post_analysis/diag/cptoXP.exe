@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cp -f DATA_mco/*.mco ~fubiani/Shared_WinXP/Miscellaneous/2D_PIC_DATA/
+
+
+

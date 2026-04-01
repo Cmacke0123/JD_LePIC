@@ -1,0 +1,8 @@
+ 0    10.  0.104166667 ! xmin, xmax, ymax (<0 for a disk)		
+ 0.   0.   1 ! x,y,V (>0 dirichlet, -2 Neumann, 0 or -3 periodic, <=-4 dielectric)
+ 0.   0.104166667  1
+ 0.   0.104166667   0
+ 10.  0.104166667   0
+ 10.  0.104166667  2
+ 10.  0.   2
+ 

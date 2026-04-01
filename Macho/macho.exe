@@ -1,0 +1,13 @@
+#!/bin/sh
+
+./convert.exe
+perl -i -pe 's/\n/\r\n/;' *.mco 
+#unix2dos *.mco 
+#rm -f ~fubiani/Shared_WinXP/Miscellaneous/2D_PIC_DATA/* 
+#rsync -av *.mco ~fubiani/Shared_WinXP/Miscellaneous/2D_PIC_DATA/
+rm -f *~ DATA_1D/* DATA_mco/*
+mv *.mco DATA_mco/
+mv *.dat DATA_1D/
+
+
+

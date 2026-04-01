@@ -1,0 +1,9 @@
+#!/bin/sh
+
+rm -f /home/fubiani/Shared_WinXP/Miscellaneous/DATA_seq/* 
+cp Macho/DATA_seq/*.mco /home/fubiani/Shared_WinXP/Miscellaneous/DATA_seq/
+perl -i -pe 's/\n/\r\n/;' /home/fubiani/Shared_WinXP/Miscellaneous/DATA_seq/*.mco
+
+
+
+

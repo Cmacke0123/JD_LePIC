@@ -1,0 +1,117 @@
+#                       UNIX makefile
+# INFORMATION: "ulimit -s" provides the stack size limit in kB
+# "ulimit -s unlimited" increases the value to "unlimited"
+# Other possibility in ifort is to set "-heap-arrays n" with n the max
+# stack value. gfortran option is "-fmax-stack-var-size n"
+#
+
+CC=mpiifort
+OPT= $(BASE)
+BASE= -O3 -ipo -no-prec-div -m64 -qopenmp -auto -unroll-aggressive -xHost -mkl -fp-model fast=2 # -mtune=skylake -xCORE-AVX512 -mt_mpi -heap-arrays 8192
+DEBUG= $(BASE) -fpe0 -traceback -CB #-fp-stack-check -warn all,noexternal -check uninit -check pointers -check output_conversion -check format #-check stack -check arg_temp_created -g
+
+OBJ=main.o load_part.o iterative_solver.o part_expmover.o calc_rho.o ran2.o utils.o collisions.o read_reactions.o indexx.o read_input.o generate_boundary.o mg.o sors.o Efield.o restart.o part_flux_emitter.o Bfield.o write_data.o sorting.o e_heating.o load_gauss.o part_injection.o mod_system.o sparse_matrices.o mod_directsolver.o directsolver.o tridiag.o 1d_routines.o
+EXEBIN=2dphpic.exe
+DIR =../.
+
+all: $(EXEBIN) install clean
+
+clean: 
+	rm -f  *~ *.o *.il *genmod* *.mod $(EXEBIN)
+
+install: 
+	cp  $(EXEBIN) $(DIR) 
+
+# lib
+
+main.o: main.f90
+	$(CC) $(OPT) -c  -o main.o main.f90
+
+load_part.o: load_part.f90
+	$(CC) $(OPT) -c  -o load_part.o load_part.f90
+
+iterative_solver.o: iterative_solver.f90
+	$(CC) $(OPT) -c  -o iterative_solver.o iterative_solver.f90
+
+part_expmover.o: part_expmover.f90
+	$(CC) $(OPT) -c  -o part_expmover.o part_expmover.f90 
+
+calc_rho.o: calc_rho.f90
+	$(CC) $(OPT) -c  -o calc_rho.o calc_rho.f90
+
+ran2.o: ran2.f90
+	$(CC) $(OPT) -c  -o ran2.o ran2.f90
+
+utils.o: utils.f90
+	$(CC) $(OPT) -c  -o utils.o utils.f90
+
+collisions.o: collisions.f90
+	$(CC) $(OPT) -c  -o collisions.o collisions.f90
+
+read_reactions.o: read_reactions.f90
+	$(CC) $(OPT) -c  -o read_reactions.o read_reactions.f90
+
+indexx.o: indexx.f90
+	$(CC) $(OPT) -c  -o indexx.o indexx.f90
+
+read_input.o: read_input.f90
+	$(CC) $(OPT) -c  -o read_input.o read_input.f90
+
+generate_boundary.o: generate_boundary.f90
+	$(CC) $(OPT) -c  -o generate_boundary.o generate_boundary.f90
+
+mg.o: mg.f90
+	$(CC) $(OPT) -c  -o mg.o mg.f90 
+
+sors.o: sors.f90
+	$(CC) $(OPT) -c  -o sors.o sors.f90 
+
+Efield.o: Efield.f90
+	$(CC) $(OPT) -c  -o Efield.o Efield.f90 
+
+restart.o: restart.f90
+	$(CC) $(OPT) -c  -o restart.o restart.f90 
+
+Bfield.o: Bfield.f90
+	$(CC) $(OPT) -c  -o Bfield.o Bfield.f90 
+
+write_data.o: write_data.f90
+	$(CC) $(OPT) -c  -o write_data.o write_data.f90 
+
+part_flux_emitter.o: part_flux_emitter.f90
+	$(CC) $(OPT) -c  -o part_flux_emitter.o part_flux_emitter.f90 
+
+sorting.o: sorting.f90
+	$(CC) $(OPT) -c  -o sorting.o sorting.f90 
+
+e_heating.o: e_heating.f90
+	$(CC) $(OPT) -c  -o e_heating.o e_heating.f90 
+
+load_gauss.o: load_gauss.f90
+	$(CC) $(OPT) -c  -o load_gauss.o load_gauss.f90 
+
+part_injection.o: part_injection.f90
+	$(CC) $(OPT) -c  -o part_injection.o part_injection.f90 
+
+mod_system.o: mod_system.f90 sparse_matrices.o Makefile
+	$(CC) $(OPT) -c  -o mod_system.o mod_system.f90
+
+sparse_matrices.o: sparse_matrices.f90
+	$(CC) $(OPT) -c  -o sparse_matrices.o sparse_matrices.f90
+
+mod_directsolver.o: mod_directsolver.f90 mod_system.o sparse_matrices.o Makefile
+	$(CC) $(OPT) -c  -o mod_directsolver.o mod_directsolver.f90
+
+directsolver.o: directsolver.f90 mod_directsolver.o Makefile
+	$(CC) $(OPT) -c  -o directsolver.o directsolver.f90
+
+tridiag.o: tridiag.f90
+	$(CC) $(OPT) -c  -o tridiag.o tridiag.f90
+
+1d_routines.o: 1d_routines.f90
+	$(CC) $(OPT) -c  -o 1d_routines.o 1d_routines.f90
+
+# exe
+
+2dphpic.exe: $(OBJ)
+	$(CC) $(OPT) -o $@ $(OBJ)

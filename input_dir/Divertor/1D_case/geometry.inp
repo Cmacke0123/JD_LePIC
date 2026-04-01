@@ -1,0 +1,8 @@
+ 0.0      0.128       0.004      ! xmin, xmax, ymax (<0 to draw a disk)
+ 0.0      0.000     -2 ! x,y,V (>0 dirichlet, -2 Neumann, 0 or -3 periodic, <=-4 dielectric)
+ 0.0      0.004     -2 
+ 0.0      0.004      0
+ 0.128    0.004      0
+ 0.128    0.004      1 
+ 0.128    0.000      1 
+
