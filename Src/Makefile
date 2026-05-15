@@ -5,9 +5,9 @@
 # stack value. gfortran option is "-fmax-stack-var-size n"
 #
 
-CC=mpiifort
+CC=mpiifx
 OPT= $(BASE)
-BASE= -O3 -ipo -no-prec-div -m64 -qopenmp -auto -unroll-aggressive -xHost -mkl -fp-model fast=2 # -mtune=skylake -xCORE-AVX512 -mt_mpi -heap-arrays 8192
+BASE= -O3 -ipo -no-prec-div -m64 -qopenmp -auto  -xHost -qmkl -fp-model fast=2 # -mtune=skylake -xCORE-AVX512 -mt_mpi -heap-arrays 8192 -unroll-aggressive
 DEBUG= $(BASE) -fpe0 -traceback -CB #-fp-stack-check -warn all,noexternal -check uninit -check pointers -check output_conversion -check format #-check stack -check arg_temp_created -g
 
 OBJ=main.o load_part.o iterative_solver.o part_expmover.o calc_rho.o ran2.o utils.o collisions.o read_reactions.o indexx.o read_input.o generate_boundary.o mg.o sors.o Efield.o restart.o part_flux_emitter.o Bfield.o write_data.o sorting.o e_heating.o load_gauss.o part_injection.o mod_system.o sparse_matrices.o mod_directsolver.o directsolver.o tridiag.o 1d_routines.o

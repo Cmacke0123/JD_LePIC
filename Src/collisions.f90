@@ -228,7 +228,7 @@ subroutine collision_OMP(vxp,n,h,ntype,nmax,sig,sig_Er, &
        flag_err(npart),Nc_tmp,flag_diag
   integer:: ipt,npt,npt_mx,icol,ncol_mx,sig_list(npart,ncol_mx),&
        col_info(ncol_mx,10),n_re,n_by,ttype,ind_col,sav_ttype(ncol_mx),&
-       indx(ncol_mx),i_by,i_re,btype,ctype,flag_add(10),opt_add, &
+       indx(ncol_mx),i_by, j_by, i_re,btype,ctype,flag_add(10),opt_add, &
        tproc,cnt_proc,bproc,sav_tproc(npart),cnt_ppc,ipt_L,ipt_R,ipt_M,&
        opt_scat,cnt_ele,flag_ion
   integer(kind=1):: flag_dead(nmax,ntype,nproc)
@@ -249,8 +249,12 @@ subroutine collision_OMP(vxp,n,h,ntype,nmax,sig,sig_Er, &
   ! Extra
   character:: answer*1
 
-  real(kind=8) :: Ek_before, Ek_after, Ek_diff
+!
+!TMP
+!
+  real(kind=8) :: Ek_before(ntype), Ek_after, Ek_diff
 
+  Ek_before = 0.d0 
 
   ! Initialization
   vz_sav=0.d0
@@ -447,10 +451,19 @@ subroutine collision_OMP(vxp,n,h,ntype,nmax,sig,sig_Er, &
                 (vz(1) - vz(2))*(vz(1) - vz(2)) )
 
            Ekr(ttype)= ( 0.5d0*mu(ttype)*vr(ttype)**2. )/qe ! eV   
-
-           Ek_before = 0.5d0*abs(mass(ptype)*(vx(1)**2.+vy(1)**2.+vz(1)**2.)) &
+         
+         !!!TMP
+           Ek_before(ttype) = 0.5d0*abs(mass(ptype)*(vx(1)**2.+vy(1)**2.+vz(1)**2.)) &
                   + 0.5d0*abs(mass(ttype)*(vx(2)**2.+vy(2)**2.+vz(2)**2.))
-           
+            !if (charge(ttype).eq.0.d0) then 
+            !   Ek_before(ttype) = 0.5d0 * abs( mass(ptype) * (vx(1)**2 + vy(1)**2 + vz(1)**2))
+            !   else
+            !   Ek_before(ttype) = 0.5d0 * abs(mass(ptype) * (vx(1)**2 + vy(1)**2 + vz(1)**2)) &
+            !          + 0.5d0 * abs(mass(ttype) * (vx(2)**2 + vy(2)**2 + vz(2)**2))
+!
+            !endif            
+         !!!TMP
+
            sum_mass= ABS(mass(ptype)) + ABS(mass(ttype)) 
            vx_cm(ttype)= ( ABS(mass(ptype))*vx(1) + ABS(mass(ttype))*vx(2) )/sum_mass
            vy_cm(ttype)= ( ABS(mass(ptype))*vy(1) + ABS(mass(ttype))*vy(2) )/sum_mass
@@ -541,7 +554,7 @@ subroutine collision_OMP(vxp,n,h,ntype,nmax,sig,sig_Er, &
                  if(rt.ne.1 .and. rt.ne.3) then
                     flag_add(1:2)=-1
                     k2= nu(icol)*nu_max_OMP(iproc)
-
+                  
                     ! Loop over byproduct particles
                     do i_by=1,n_by
                        ! Extract byproduct type                    
@@ -655,7 +668,12 @@ subroutine collision_OMP(vxp,n,h,ntype,nmax,sig,sig_Er, &
         !
         ! All reactions but charge exchange
         !
-        Ek_after = 0.0d0
+        !
+       !
+       ! TMP
+       !
+       Ek_after = 0.0d0
+        
         if( rt.ne.4 ) then                 
 
            ! Get threshold energy 
@@ -823,9 +841,9 @@ subroutine collision_OMP(vxp,n,h,ntype,nmax,sig,sig_Er, &
                  call SCATTER(ex1,ey1,ez1,ex,ey,ez,cos_th_s,phi_s) 
                  
                  vp= dsqrt( 2.d0*(Ee/sum_mass)/ABS(mass(btype))**2. )
-                 vbx= vx_cm(ttype) + vp*ex1
-                 vby= vy_cm(ttype) + vp*ey1
-                 vbz= vz_cm(ttype) + vp*ez1
+                 vbx= vx_cm(ttype) + vp*ex
+                 vby= vy_cm(ttype) + vp*ey
+                 vbz= vz_cm(ttype) + vp*ez
               endif
               
               ! Method which fixes energy repartition (does not conserve momentum)
@@ -883,26 +901,6 @@ subroutine collision_OMP(vxp,n,h,ntype,nmax,sig,sig_Er, &
 110           continue
            enddo ! end-Loop over byproducts
 
-         !   if (rt.eq.1 .and. bproc.eq.1) then
-         !       Ek_diff= Ek_before - Ek_after
-         !       print*, ' '
-         !       print*, '------------   Collision diagnostic ------------'
-         !       print*, pname(ptype), " + ", pname(ttype), " -> ", &
-         !            (pname(col_info(c_ind,2+n_re+i_by)), i_by=1,n_by)
-         !       print*, 'Collision number: ', c_ind
-         !       print*, 'Threshold energy = ', Eth, "eV"
-               
-         !       print*, 'Energy before collision = ', Ek_before/qe, "eV"
-         !       print*, 'Energy after collision = ', Ek_after/qe, "eV"
-         !       if(Ek_diff.gt.0.d0) then
-         !          print*, 'Energy loss = ', Ek_diff/qe, "eV"
-         !       else
-         !          print*, 'Energy gain = ', abs(Ek_diff)/qe, "eV"
-         !       endif
-         !       print*, '------------------------------------------------'
-         !       print*, ' '
-         !       call stop_calculation
-         !   endif
         
            !
            ! Reactant particles
@@ -983,34 +981,46 @@ subroutine collision_OMP(vxp,n,h,ntype,nmax,sig,sig_Er, &
                    vxp(4,ib,btype,bproc)*vxp(4,ib,btype,bproc) + &
                    vxp(5,ib,btype,bproc)*vxp(5,ib,btype,bproc) + &
                    vxp(6,ib,btype,bproc)*vxp(6,ib,btype,bproc) - v2old ) 
-               
-               Ek_after = Ek_after + 0.5d0*abs(mass(btype)*(vx(ind_ce)**2.+vy(ind_ce)**2.+vz(ind_ce)**2.))
-                            
+
+               !!!TMP
+               !Ek_after = Ek_after + 0.5d0*abs(mass(btype)*(vx(ind_ce)**2.+vy(ind_ce)**2.+vz(ind_ce)**2.))
+               !EK_after = Ek_after + 0.5d0*abs(mass(btype))*(vxp(4,ib,btype,bproc)**2 + vxp(5,ib,btype,bproc)**2 + vxp(6,ib,btype,bproc)**2)
+
+               do j_by = 1, n_by
+                  btype = col_info(c_ind, 2 + n_re + i_by)
+                  if (charge(btype).eq.0.d0) then
+                     Ek_after = Ek_after + 0.5d0*abs(mass(btype))*(vxp(4,ib,btype,bproc)**2 + vxp(5,ib,btype,bproc)**2 + vxp(6,ib,btype,bproc)**2)
+                  endif
+               enddo
+               !!!TMP  
+  
 130           continue
            enddo
               
         endif ! End-if charge exchange collisions
         
-        if (rt.eq.1 .and. bproc.eq.1) then
-               Ek_diff= Ek_before - Ek_after
-               print*, ' '
-               print*, '------------   Collision diagnostic ------------'
-               print*, pname(ptype), " + ", pname(ttype), " -> ", &
-                    (pname(col_info(c_ind,2+n_re+i_by)), i_by=1,n_by)
-               print*, 'Collision number: ', c_ind
-               print*, 'Threshold energy = ', Eth, "eV"
-               
-               print*, 'Energy before collision = ', Ek_before/qe, "eV"
-               print*, 'Energy after collision = ', Ek_after/qe, "eV"
-               if(Ek_diff.gt.0.d0) then
-                  print*, 'Energy loss = ', Ek_diff/qe, "eV"
-               else
-                  print*, 'Energy gain = ', abs(Ek_diff)/qe, "eV"
-               endif
-               print*, '------------------------------------------------'
-               print*, ' '
-               call stop_calculation
-         endif
+        !if (c_ind.eq.13 .and. bproc.eq.1) then
+        !       Ek_diff= Ek_before(ttype) - Ek_after
+        !       print*, ' '
+        !       print*, '------------   Collision diagnostic ------------'
+        !       print*, pname(ptype), " + ", pname(ttype), " -> ", &
+        !            (pname(col_info(c_ind,2+n_re+i_by)), i_by=1,n_by)
+        !       print*, 'Collision number: ', c_ind
+        !       print*, 'Threshold energy = ', Eth, "eV"
+        !       
+        !       print*, 'Energy before collision = ', Ek_before(ttype)/qe, "eV"
+        !       print*, 'Energy after collision = ', Ek_after/qe, "eV"
+        !       if(Ek_diff.gt.0.d0) then
+        !          print*, 'Energy loss = ', Ek_diff/qe, "eV"
+        !          print*, 'Error =', abs(Ek_diff/qe - Eth)
+        !       else
+        !          print*, 'Energy gain = ', abs(Ek_diff)/qe, "eV"
+        !          print*, 'Error =', abs(Ek_diff/qe - Eth)
+        !       endif
+        !       print*, '------------------------------------------------'
+        !       print*, ' '
+        !       !call stop_calculation
+        ! endif
 
         ! Count total number of actual collision events
         i_rg_loop2: do i_rg=1,n_rg
@@ -1058,3 +1068,4 @@ SUBROUTINE SCATTER(vx1,vy1,vz1,vx,vy,vz,costheta,phi)
   ENDIF
 return
 END SUBROUTINE SCATTER
+

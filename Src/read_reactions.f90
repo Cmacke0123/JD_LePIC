@@ -269,6 +269,8 @@ subroutine read_reactions(sig,sig_Er,sig_list,sig_Eex,ncol_mx,sig_type, &
 
         
      sig_Eex(icol,ind_Eth)= sig_Eex(icol,ind_Eth)*sig_scale(1)
+      
+      !Reaction type indexing 
 
      if( rtype.eq.'COLLISION' .or. rtype.eq.'collision' ) &
           col_info(icol,ind_nby+1+n_re+n_by)=1
@@ -282,27 +284,27 @@ subroutine read_reactions(sig,sig_Er,sig_list,sig_Eex,ncol_mx,sig_type, &
           col_info(icol,ind_nby+1+n_re+n_by)=5
 
       if( rtype(1:4).eq.'DATT' .or. rtype(1:4).eq.'datt' ) &
-          col_info(icol,ind_nby+1+n_re+n_by)=6
+          col_info(icol,ind_nby+1+n_re+n_by)=2
      if( rtype(1:4).eq.'DION' .or. rtype(1:4).eq.'dion' ) &
-          col_info(icol,ind_nby+1+n_re+n_by)=7
+          col_info(icol,ind_nby+1+n_re+n_by)=2
      if( rtype(1:4).eq.'DISS' .or. rtype(1:4).eq.'diss' ) &
-          col_info(icol,ind_nby+1+n_re+n_by)=8
+          col_info(icol,ind_nby+1+n_re+n_by)=5
      if( rtype(1:3).eq.'ELA' .or. rtype(1:3).eq.'ela' ) &
-          col_info(icol,ind_nby+1+n_re+n_by)=9
+          col_info(icol,ind_nby+1+n_re+n_by)=1
      if( rtype(1:3).eq.'EXC' .or. rtype(1:3).eq.'exc' ) &
-          col_info(icol,ind_nby+1+n_re+n_by)=10
+          col_info(icol,ind_nby+1+n_re+n_by)=3
      if( rtype(1:3).eq.'ION' .or. rtype(1:3).eq.'ion' ) &
           col_info(icol,ind_nby+1+n_re+n_by)=2
      if( rtype(1:4).eq.'VIBB' .or. rtype(1:4).eq.'vibb' ) &
-          col_info(icol,ind_nby+1+n_re+n_by)=11
+          col_info(icol,ind_nby+1+n_re+n_by)=3
      if( rtype(1:4).eq.'VIBS' .or. rtype(1:4).eq.'vibs' ) &
-          col_info(icol,ind_nby+1+n_re+n_by)=12
+          col_info(icol,ind_nby+1+n_re+n_by)=3
      if( rtype(1:3).eq.'CEX' .or. rtype(1:3).eq.'cex' ) &
-          col_info(icol,ind_nby+1+n_re+n_by)=13
+          col_info(icol,ind_nby+1+n_re+n_by)=4
      if( rtype(1:3).eq.'DRE' .or. rtype(1:3).eq.'dre' ) &
-          col_info(icol,ind_nby+1+n_re+n_by)=14
+          col_info(icol,ind_nby+1+n_re+n_by)=5
      if( rtype(1:3).eq.'RRE' .or. rtype(1:3).eq.'rre' ) &
-          col_info(icol,ind_nby+1+n_re+n_by)=15
+          col_info(icol,ind_nby+1+n_re+n_by)=2
      
         
      ! Warning

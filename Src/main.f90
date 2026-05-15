@@ -491,8 +491,8 @@ program main
      tseq= nseq*dt ! correct tseq
   endif
   nudt=nu_h*(ns_heat*dt)  ! % of electrons which should be heated
-  nu_uplim(1)=2.d9 ! Maximum collision frequency (e-)
-  nu_uplim(2:ntype)=5.d7 ! (ions)
+  nu_uplim(1)=4.d7 ! Maximum collision frequency (e-)
+  nu_uplim(2:ntype)=5.d6 ! (ions)
   ns_Hm= 1 ! Negative ion injection frequency on the PE
   eheat_type=1 ! Electron velocity sampled from Maxwellian: 1= full velocity, 2= only increment dv
   if(Pabs(1).le.0.d0) eheat_type=1 ! when fixed Te is set

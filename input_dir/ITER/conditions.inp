@@ -27,6 +27,6 @@ no 14 2 1 ! Restart (yes/no/external/gauss),  # of OMP threads, # of MPI, # for 
 yes 40. 40. 27.8 1. 0 n 4 ! particle flux off a surface : draw segment (y/n), x1/x2/Lg/Lh (cm), # holes, sum index (y/n), wall index
 60. 3 1. 4 ! |js|(mA/cm2), ptype, Tbeam(eV) (<0 Te for e-ion pair injection), part. moments on grid #[index] (<0 for phase-space)
 0.57 32. 0. 1  1.d-6 ! h=ns/<n> [<0 length=1m and no losses], length in 3rd dim (cm), bias(V), opts (1=metal, 2=floating), capacitance (F/m2)
--0.1 2 ! Secondary emission coeff (<0 == off), grid index (<0, fixed current instead)
+-0.1 2 no 125. 800.d6 0. 0. ! Secondary emission coeff (<0 == off), grid index (<0, fixed current instead), RF (yes/no), phi0(V), f0(Hz), phi1(V), f1(Hz)
 END
 

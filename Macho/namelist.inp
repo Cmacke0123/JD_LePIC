@@ -1,3 +1,5 @@
+ B.dat
+ Bz.dat
  bcnd.dat
  kq.dat
  phi.dat
@@ -8,24 +10,24 @@
  T1.dat
  sour1.dat
  sink1.dat
- j1x.dat
+ j1.dat
  n2.dat
  T2.dat
  sour2.dat
  sink2.dat
- j2x.dat
+ j2.dat
  n3.dat
  T3.dat
  sour3.dat
  sink3.dat
- j3x.dat
+ j3.dat
  n4.dat
  T4.dat
  sour4.dat
  sink4.dat
- j4x.dat
+ j4.dat
  n5.dat
  T5.dat
  sour5.dat
  sink5.dat
- j5x.dat
+ j5.dat
