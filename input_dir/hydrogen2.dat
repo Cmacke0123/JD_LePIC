@@ -3652,7 +3652,7 @@ energy(eV), cross section (m^2), eidetachment, threshold energy: 0.754 eV
 REACTION
 [e]+[H2]->[H-]+[H]
 0.1  0.
-1.  0.01
+1.  0.10
 DISSOCIATION
 Entry #49
 Dissociative Electron Attachment
