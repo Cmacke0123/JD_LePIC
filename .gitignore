@@ -1,2 +1,5 @@
-*.dat
-*.mco
+DATA/
+DATA.BAK/
+DATA.BAK2/
+/Macho/DATA_1D/
+/Macho/DATA_mco/
