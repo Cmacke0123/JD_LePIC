@@ -3,189 +3,6 @@
  +                                                                          +
  + 2.5D-3V explicit parallel particle in cell code                          +
  +                                                                          +
- + LePIC 2.5D algorithm version: 4.6.7                                      +
- + Last modifications: November/2023                                        +
- +                                                                          +
- + Copyright or © or Copr. Gwenael Fubiani (2022/11/22)                     +
- +                                                                          +
- + gwenael.fubiani@cnrs.fr                                                  +
- +                                                                          +
- + This software is a computer program whose purpose is to model low        +
- + temperature plasmas with a Particle-In-Cell algorihm in 2.5D-3V          +
- + dimensions.                                                              +
- +                                                                          +
- + This software is governed by the CeCILL-C license under French law and   +
- + abiding by the rules of distribution of free software.  You can  use,    +
- + modify and/ or redistribute the software under the terms of the CeCILL-C +
- + license as circulated by CEA, CNRS and INRIA at the following URL        +
- + "http://www.cecill.info".                                                +
- +                                                                          +
- + As a counterpart to the access to the source code and  rights to copy,   +
- + modify and redistribute granted by the license, users are provided only  +
- + with a limited warranty and the software's author, the holder of the     +
- + economic rights,  and the successive licensors  have only  limited       +
- + liability.                                                               +
- +                                                                          +
- + In this respect, the user's attention is drawn to the risks associated   +
- + with loading,  using,  modifying and/or developing or reproducing the    +
- + software by the user in light of its specific status of free software,   +
- + that may mean  that it is complicated to manipulate,  and  that  also    +
- + therefore means  that it is reserved for developers  and  experienced    +
- + professionals having in-depth computer knowledge. Users are therefore    +
- + encouraged to load and test the software's suitability as regards their  +
- + requirements in conditions enabling the security of their systems and/or +
- + data to be ensured and,  more generally, to use and operate it in the    +
- + same conditions as regards security.                                     +
- +                                                                          +
- + The fact that you are presently reading this means that you have had     +
- + knowledge of the CeCILL-C license and that you accept its terms.         +
- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                                                  
- Number of OpenMP threads=  16
- Number of MPI threads=   4
- Input file was read correctly ...
- eps0 HAS BEEN RE-SCALED: k_eps0=   36000.0000000000     
- Gas chemistry read correctly (end of file reached)
- Total number of reactions:          61
- Updated hole radius (cm):    0.91 cm
- Gaussian magnetic filter field profile
- Frequency of calls to collision subroutine=  10
- Frequency of calls to electron heating subroutine=   4
- Electron velocity sampled from a Maxwellian: velocity is replaced
- Frequency of calls to sort subroutine=  10
- Heating region (cm): x<=   0.0, x>=  16.0, y<=   0.0, y>=  58.0
- Particle loading region: nx<=   129
- Loading particles ...
- Particles: [e]   [H2+] [H-]  [H3+] [H+] 
- np=    379328    170668         0     94530    113460
- lde (mm)=   6.30790928233794     
- lpe (mm)=   10708.4415408690     
- vt (m/s)=   1569187.13117733       0.000000000000000E+000
-  0.000000000000000E+000  0.000000000000000E+000  0.000000000000000E+000
- <|v|> (m/s)=   1770638.06809487     
- dx (mm)=   3.12500000000000      dx/lde=  0.495409787954617     
- dy (mm)=   3.02083333333333      dy/lde=  0.478896128356130     
- Nm=   52864583333.3333     
- dt (s)=  5.775283151347667E-010 , wpe*dt=  0.101589209953381     
- vte*dt/dx=  0.300000000000000     
- Bm(G)=    75., wc*dt=  0.76, wc (/s)=   1.3191E+09, re (mm)=  1.19
- err: w*/wc=  0.96, r*/re=  1.07
- Multigrid PDE Solver is used, eps=   1.00E-08
- ng=  7
- nx=  128, ny=  192 # of cells:    18966
- Frequency for averaging=  50
- Absorbed power profile is flattop
- Particle flux emmited on grid located at xg= 40.00 cm, ig=   4
- Source/sink plotting option on
- *** Startup time (s):   0.3 ***
-  
- Running simulation ...
- Particle current generated on the electrode: Isurf(A)=   5.34E+01, jsurf(A/m2)=  600.0
- it=        1, t (us)=    0.0, np=    377794     170663         16      94528     113452
- Pwall (W)=  -2.73E+05, Pabs (W)=   0.00E+00, Pcoll (W)=   0.00E+00, Pinj (W)=   6.22E+02, I_w (A)=  -2.24E+04    2.20E+02  , Ek_w (eV)=   1.41E+01    6.36E-07
- Backing up simulation data ...
- Done!
- it=     2501, t (us)=    1.4, np=    318274     166537       4894      90985      91914
- Pwall (W)=  -3.41E+04, Pabs (W)=   6.07E+04, Pcoll (W)=  -2.74E+04, Pinj (W)=   9.60E+01, I_w (A)=  -8.06E+02    6.62E+02  , Ek_w (eV)=   3.45E+01    1.07E+01
- Neg. ion current lost through collisions (A)= -2.06E+00
- <t> (ms): E/rho=     0.5, poisson=    10.9, sorting=     0.2, avg/write=     1.3, MC=     1.8, mover=     1.4, bck=     0.0, total=    16.2
- Backing up simulation data ...
- Done!
- it=     5001, t (us)=    2.9, np=    325777     174267       7658      91870      88932
- Pwall (W)=  -2.95E+04, Pabs (W)=   6.02E+04, Pcoll (W)=  -3.01E+04, Pinj (W)=   1.05E+02, I_w (A)=  -5.03E+02    5.32E+02  , Ek_w (eV)=   4.35E+01    1.61E+01
- Neg. ion current lost through collisions (A)= -3.28E+00
- <t> (ms): E/rho=     0.5, poisson=    10.6, sorting=     0.2, avg/write=     1.2, MC=     1.8, mover=     1.5, bck=     0.0, total=    16.0
- Backing up simulation data ...
- Done!
- it=     7501, t (us)=    4.3, np=    335045     179340      12198      93895      93945
- Pwall (W)=  -2.73E+04, Pabs (W)=   6.05E+04, Pcoll (W)=  -3.17E+04, Pinj (W)=   1.12E+02, I_w (A)=  -4.85E+02    4.93E+02  , Ek_w (eV)=   4.02E+01    1.69E+01
- Neg. ion current lost through collisions (A)= -4.92E+00
- <t> (ms): E/rho=     0.5, poisson=    10.5, sorting=     0.2, avg/write=     1.3, MC=     1.9, mover=     1.6, bck=     0.0, total=    16.0
- Backing up simulation data ...
- Done!
- it=    10001, t (us)=    5.8, np=    343080     182636      16671      95749     100321
- Pwall (W)=  -2.66E+04, Pabs (W)=   6.04E+04, Pcoll (W)=  -3.29E+04, Pinj (W)=   1.12E+02, I_w (A)=  -4.85E+02    4.89E+02  , Ek_w (eV)=   3.80E+01    1.74E+01
- Neg. ion current lost through collisions (A)= -7.37E+00
- <t> (ms): E/rho=     0.5, poisson=    10.5, sorting=     0.2, avg/write=     1.3, MC=     1.9, mover=     1.7, bck=     0.0, total=    16.1
- Backing up simulation data ...
- Done!
- it=    12501, t (us)=    7.2, np=    346528     182596      20333      97296     105631
- Pwall (W)=  -2.63E+04, Pabs (W)=   5.94E+04, Pcoll (W)=  -3.29E+04, Pinj (W)=   1.10E+02, I_w (A)=  -4.94E+02    4.95E+02  , Ek_w (eV)=   3.65E+01    1.75E+01
- Neg. ion current lost through collisions (A)= -8.95E+00
- <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     1.9, mover=     1.8, bck=     0.0, total=    16.1
- Backing up simulation data ...
- Done!
- it=    15001, t (us)=    8.7, np=    348395     181435      23229      99019     109858
- Pwall (W)=  -2.62E+04, Pabs (W)=   5.96E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   1.07E+02, I_w (A)=  -4.99E+02    4.99E+02  , Ek_w (eV)=   3.59E+01    1.74E+01
- Neg. ion current lost through collisions (A)= -1.05E+01
- <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     1.9, mover=     1.8, bck=     0.0, total=    16.2
- Backing up simulation data ...
- Done!
- it=    17501, t (us)=   10.1, np=    351112     181198      25124     100141     112875
- Pwall (W)=  -2.67E+04, Pabs (W)=   6.04E+04, Pcoll (W)=  -3.36E+04, Pinj (W)=   1.13E+02, I_w (A)=  -5.12E+02    5.13E+02  , Ek_w (eV)=   3.59E+01    1.74E+01
- Neg. ion current lost through collisions (A)= -1.05E+01
- <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     1.9, mover=     1.9, bck=     0.0, total=    16.3
- Backing up simulation data ...
- Done!
- it=    20001, t (us)=   11.6, np=    353340     180186      25034     100695     115748
- Pwall (W)=  -2.64E+04, Pabs (W)=   6.01E+04, Pcoll (W)=  -3.34E+04, Pinj (W)=   1.13E+02, I_w (A)=  -5.23E+02    5.18E+02  , Ek_w (eV)=   3.55E+01    1.71E+01
- Neg. ion current lost through collisions (A)= -1.16E+01
- <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     1.9, mover=     1.9, bck=     0.0, total=    16.3
- Backing up simulation data ...
- Done!
- it=    22501, t (us)=   13.0, np=    353628     177822      25340     101106     118011
- Pwall (W)=  -2.66E+04, Pabs (W)=   5.93E+04, Pcoll (W)=  -3.34E+04, Pinj (W)=   1.03E+02, I_w (A)=  -5.18E+02    5.22E+02  , Ek_w (eV)=   3.52E+01    1.74E+01
- Neg. ion current lost through collisions (A)= -1.12E+01
- <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     1.9, mover=     1.9, bck=     0.0, total=    16.3
- Backing up simulation data ...
- Done!
- it=    25001, t (us)=   14.4, np=    352268     175539      25709     101148     119336
- Pwall (W)=  -2.63E+04, Pabs (W)=   5.89E+04, Pcoll (W)=  -3.28E+04, Pinj (W)=   1.01E+02, I_w (A)=  -5.16E+02    5.19E+02  , Ek_w (eV)=   3.48E+01    1.71E+01
- Neg. ion current lost through collisions (A)= -1.14E+01
- <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     2.0, mover=     2.0, bck=     0.0, total=    16.4
- Backing up simulation data ...
- Done!
- it=    27501, t (us)=   15.9, np=    351873     174818      26325     101455     119983
- Pwall (W)=  -2.64E+04, Pabs (W)=   5.96E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   1.09E+02, I_w (A)=  -5.21E+02    5.20E+02  , Ek_w (eV)=   3.50E+01    1.71E+01
- Neg. ion current lost through collisions (A)= -1.15E+01
- <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     2.0, mover=     2.0, bck=     0.0, total=    16.4
- Backing up simulation data ...
- Done!
- it=    30001, t (us)=   17.3, np=    351429     174485      27148     101388     120611
- Pwall (W)=  -2.64E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   1.12E+02, I_w (A)=  -5.19E+02    5.17E+02  , Ek_w (eV)=   3.52E+01    1.70E+01
- Neg. ion current lost through collisions (A)= -1.18E+01
- <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     2.0, mover=     2.0, bck=     0.0, total=    16.4
- Backing up simulation data ...
- Done!
- it=    32501, t (us)=   18.8, np=    352305     175374      28066     101525     121718
- Pwall (W)=  -2.68E+04, Pabs (W)=   6.07E+04, Pcoll (W)=  -3.36E+04, Pinj (W)=   1.06E+02, I_w (A)=  -5.23E+02    5.21E+02  , Ek_w (eV)=   3.52E+01    1.73E+01
- Neg. ion current lost through collisions (A)= -1.21E+01
- <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     2.0, mover=     2.0, bck=     0.0, total=    16.5
- Backing up simulation data ...
- Done!
- it=    35001, t (us)=   20.2, np=    350742     173568      29146     101800     122545
- Pwall (W)=  -2.66E+04, Pabs (W)=   5.90E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   1.06E+02, I_w (A)=  -5.21E+02    5.22E+02  , Ek_w (eV)=   3.49E+01    1.71E+01
- Neg. ion current lost through collisions (A)= -1.22E+01
- <t> (ms): E/rho=     0.5, poisson=    10.4, sorting=     0.2, avg/write=     1.3, MC=     2.0, mover=     2.0, bck=     0.0, total=    16.5
-*** Start calculation ... ***
-./run.exe: line 14: mpirun: command not found
-
-real	0m0.005s
-user	0m0.001s
-sys	0m0.004s
- Total calculation time : 0 min 0 sec
-*** Start calculation ... ***
-./run.exe: line 14: mpirun: command not found
-
-real	0m0.004s
-user	0m0.001s
-sys	0m0.003s
- Total calculation time : 0 min 0 sec
-*** Start calculation ... ***
- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- +                                                                          +
- + 2.5D-3V explicit parallel particle in cell code                          +
- +                                                                          +
  + LePIC 2.5D algorithm version: 4.7.4                                      +
  + Last modifications: Sep/2024                                             +
  +                                                                          +
@@ -224,12 +41,12 @@ sys	0m0.003s
  + knowledge of the CeCILL-C license and that you accept its terms.         +
  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                                                   
- Number of OpenMP threads=  16
+ Number of OpenMP threads=  32
  Number of MPI threads=   2
  Input file was read correctly ...
  eps0 HAS BEEN RE-SCALED: k_eps0=   36000.0000000000     
  Gas chemistry read correctly (end of file reached)
- Total number of reactions:         578
+ Total number of reactions:          61
  Updated hole radius (cm):    0.91 cm
  Gaussian magnetic filter field profile
  Frequency of calls to collision subroutine=  10
@@ -240,7 +57,7 @@ sys	0m0.003s
  Particle loading region: nx<=   129
  Loading particles ...
  Particles: [e]   [H2+] [H-]  [H3+] [H+] 
- np=    379328    169987         0     94240    113288
+ np=    379328    170700         0     94803    113852
  lde (mm)=   6.30790928233794     
  lpe (mm)=   10708.4415408690     
  vt (m/s)=   1569187.13117733       0.000000000000000E+000
@@ -257,39 +74,616 @@ sys	0m0.003s
  ng=  7
  nx=  128, ny=  192 # of cells:    18966
  Frequency for averaging=  50
+ Frequency for saving sequence of profiles=   2500, dt(us)= 1.44, cnt_plt=   0
  Absorbed power profile is flattop
- *** Startup time (s):  29.1 ***
+ *** Startup time (s):   0.6 ***
   
  Running simulation ...
- it=        1, t (us)=    0.0, np=    377675     169981          0      94235     113285
- Pwall (W)=  -3.06E+05, Pabs (W)=   0.00E+00, Pcoll (W)=   0.00E+00, Pinj (W)=   0.00E+00, I_w (A)=  -2.42E+04    2.05E+02  , Ek_w (eV)=   1.40E+01    7.83E-08
+ it=        1, t (us)=    0.0, np=    377806     170694          0      94801     113848
+ Pwall (W)=  -2.69E+05, Pabs (W)=   0.00E+00, Pcoll (W)=   0.00E+00, Pinj (W)=   0.00E+00, I_w (A)=  -2.23E+04    1.76E+02  , Ek_w (eV)=   1.45E+01    6.29E-08
  Backing up simulation data ...
-forrtl: No such file or directory
-forrtl: severe (29): file not found, unit 41, file /home/cmackenzie/PIC-codes/LePIC/JD_LePIC/JD_LePIC/DATA.BAK/particles0.bak
-Image              PC                Routine            Line        Source             
-2dphpic.exe        0000000000473699  Unknown               Unknown  Unknown
-2dphpic.exe        000000000041D1BC  Unknown               Unknown  Unknown
-2dphpic.exe        000000000040653D  Unknown               Unknown  Unknown
-libc.so.6          00001548F2A2A610  Unknown               Unknown  Unknown
-libc.so.6          00001548F2A2A6C0  __libc_start_main     Unknown  Unknown
-2dphpic.exe        0000000000406425  Unknown               Unknown  Unknown
-forrtl: No such file or directory
-forrtl: severe (29): file not found, unit 42, file /home/cmackenzie/PIC-codes/LePIC/JD_LePIC/JD_LePIC/DATA.BAK/particles1.bak
-Image              PC                Routine            Line        Source             
-2dphpic.exe        0000000000473699  Unknown               Unknown  Unknown
-2dphpic.exe        000000000041D1BC  Unknown               Unknown  Unknown
-2dphpic.exe        000000000040653D  Unknown               Unknown  Unknown
-libc.so.6          000015385DC2A610  Unknown               Unknown  Unknown
-libc.so.6          000015385DC2A6C0  __libc_start_main     Unknown  Unknown
-2dphpic.exe        0000000000406425  Unknown               Unknown  Unknown
+ Done!
+ it=     2501, t (us)=    1.4, np=    313736     165910       5505      90959      92178
+ Pwall (W)=  -3.10E+04, Pabs (W)=   6.01E+04, Pcoll (W)=  -2.74E+04, Pinj (W)=   0.00E+00, I_w (A)=  -8.31E+02    6.65E+02  , Ek_w (eV)=   3.20E+01    1.09E+01
+ Neg. ion current lost through collisions (A)= -2.34E+00
+ <t> (ms): E/rho=     1.6, poisson=    13.4, sorting=     0.4, avg/write=     1.0, MC=     1.8, mover=     3.2, bck=     0.0, total=    21.3
+ Backing up simulation data ...
+ Done!
+ it=     5001, t (us)=    2.9, np=    317847     174032      10609      91056      88394
+ Pwall (W)=  -2.92E+04, Pabs (W)=   6.03E+04, Pcoll (W)=  -3.02E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.14E+02    5.42E+02  , Ek_w (eV)=   3.88E+01    1.69E+01
+ Neg. ion current lost through collisions (A)= -8.00E+00
+ <t> (ms): E/rho=     1.5, poisson=    13.0, sorting=     0.4, avg/write=     0.9, MC=     1.8, mover=     3.3, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=     7501, t (us)=    4.3, np=    325678     179580      15358      92296      92134
+ Pwall (W)=  -2.78E+04, Pabs (W)=   6.07E+04, Pcoll (W)=  -3.21E+04, Pinj (W)=   0.00E+00, I_w (A)=  -4.99E+02    5.11E+02  , Ek_w (eV)=   3.63E+01    1.74E+01
+ Neg. ion current lost through collisions (A)= -1.42E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.8, sorting=     0.4, avg/write=     0.9, MC=     1.8, mover=     3.3, bck=     0.0, total=    20.6
+ Backing up simulation data ...
+ Done!
+ it=    10001, t (us)=    5.8, np=    329488     180197      19229      93428      97519
+ Pwall (W)=  -2.70E+04, Pabs (W)=   5.99E+04, Pcoll (W)=  -3.25E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.03E+02    5.06E+02  , Ek_w (eV)=   3.40E+01    1.77E+01
+ Neg. ion current lost through collisions (A)= -2.03E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.7, sorting=     0.4, avg/write=     0.9, MC=     1.8, mover=     3.4, bck=     0.0, total=    20.6
+ Backing up simulation data ...
+ Done!
+ it=    12501, t (us)=    7.2, np=    331218     179986      22426      93663     101715
+ Pwall (W)=  -2.72E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.29E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.11E+02    5.15E+02  , Ek_w (eV)=   3.29E+01    1.81E+01
+ Neg. ion current lost through collisions (A)= -2.43E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.7, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.5, bck=     0.0, total=    20.6
+ Backing up simulation data ...
+ Done!
+ it=    15001, t (us)=    8.7, np=    331964     179807      25260      93771     105504
+ Pwall (W)=  -2.73E+04, Pabs (W)=   6.05E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.13E+02    5.13E+02  , Ek_w (eV)=   3.27E+01    1.82E+01
+ Neg. ion current lost through collisions (A)= -2.71E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.7, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.6, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=    17501, t (us)=   10.1, np=    331810     179012      27557      93733     107839
+ Pwall (W)=  -2.76E+04, Pabs (W)=   5.95E+04, Pcoll (W)=  -3.34E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.20E+02    5.24E+02  , Ek_w (eV)=   3.23E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -2.90E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.7, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.6, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=    20001, t (us)=   11.6, np=    332040     178990      29400      93425     110321
+ Pwall (W)=  -2.75E+04, Pabs (W)=   6.04E+04, Pcoll (W)=  -3.34E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.21E+02  , Ek_w (eV)=   3.20E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.05E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.7, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.7, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=    22501, t (us)=   13.0, np=    329558     176389      31113      93790     111455
+ Pwall (W)=  -2.72E+04, Pabs (W)=   5.90E+04, Pcoll (W)=  -3.29E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.23E+02  , Ek_w (eV)=   3.16E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.20E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.7, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=    25001, t (us)=   14.4, np=    327800     175460      32758      93655     112541
+ Pwall (W)=  -2.72E+04, Pabs (W)=   5.92E+04, Pcoll (W)=  -3.29E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.19E+02    5.18E+02  , Ek_w (eV)=   3.19E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.19E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.8, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    27501, t (us)=   15.9, np=    328385     175807      34025      93678     113895
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.03E+04, Pcoll (W)=  -3.35E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.22E+02    5.23E+02  , Ek_w (eV)=   3.20E+01    1.86E+01
+ Neg. ion current lost through collisions (A)= -3.37E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.8, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    30001, t (us)=   17.3, np=    327979     175515      35251      93739     115030
+ Pwall (W)=  -2.74E+04, Pabs (W)=   5.99E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.22E+02    5.22E+02  , Ek_w (eV)=   3.18E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.39E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.8, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    32501, t (us)=   18.8, np=    326674     174856      36231      93638     115532
+ Pwall (W)=  -2.75E+04, Pabs (W)=   6.01E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.25E+02    5.25E+02  , Ek_w (eV)=   3.18E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.52E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.8, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    35001, t (us)=   20.2, np=    325706     174563      37176      93496     116050
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.00E+04, Pcoll (W)=  -3.33E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.26E+02    5.25E+02  , Ek_w (eV)=   3.18E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.50E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.9, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    37501, t (us)=   21.7, np=    324089     173656      38108      93293     116428
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.24E+02    5.24E+02  , Ek_w (eV)=   3.19E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.51E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.9, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    40001, t (us)=   23.1, np=    322945     173372      38927      93354     116140
+ Pwall (W)=  -2.74E+04, Pabs (W)=   5.95E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.25E+02  , Ek_w (eV)=   3.18E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.56E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.9, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    42501, t (us)=   24.5, np=    323022     174213      39533      92871     116696
+ Pwall (W)=  -2.74E+04, Pabs (W)=   6.02E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.21E+02  , Ek_w (eV)=   3.19E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.60E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.9, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    45001, t (us)=   26.0, np=    321348     173236      40350      92486     116889
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.93E+04, Pcoll (W)=  -3.29E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.24E+02    5.26E+02  , Ek_w (eV)=   3.18E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.60E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.9, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    47501, t (us)=   27.4, np=    320776     173629      40917      92176     117351
+ Pwall (W)=  -2.74E+04, Pabs (W)=   6.02E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.24E+02    5.21E+02  , Ek_w (eV)=   3.20E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.72E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.9, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    50001, t (us)=   28.9, np=    320779     173774      41393      91993     117690
+ Pwall (W)=  -2.78E+04, Pabs (W)=   6.00E+04, Pcoll (W)=  -3.33E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.26E+02    5.27E+02  , Ek_w (eV)=   3.20E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.69E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.8, MC=     1.8, mover=     3.9, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    52501, t (us)=   30.3, np=    319824     173618      41833      91589     117731
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.03E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.26E+02    5.26E+02  , Ek_w (eV)=   3.19E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.70E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.8, mover=     3.9, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    55001, t (us)=   31.8, np=    319261     173583      42307      91496     117731
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.95E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.23E+02  , Ek_w (eV)=   3.20E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.67E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.8, mover=     3.9, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    57501, t (us)=   33.2, np=    319006     173620      42653      91192     118069
+ Pwall (W)=  -2.75E+04, Pabs (W)=   6.04E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.23E+02  , Ek_w (eV)=   3.20E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.69E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.8, mover=     3.9, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    60001, t (us)=   34.7, np=    319468     174018      42884      91225     118194
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.94E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.20E+02    5.21E+02  , Ek_w (eV)=   3.18E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.76E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.8, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    62501, t (us)=   36.1, np=    319461     174966      43202      90884     118118
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.03E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.24E+02    5.23E+02  , Ek_w (eV)=   3.21E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.80E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    65001, t (us)=   37.5, np=    318552     174351      43464      90931     117925
+ Pwall (W)=  -2.77E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.26E+02    5.27E+02  , Ek_w (eV)=   3.19E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.83E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    67501, t (us)=   39.0, np=    318187     174524      43828      90891     117852
+ Pwall (W)=  -2.74E+04, Pabs (W)=   5.99E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.22E+02    5.22E+02  , Ek_w (eV)=   3.19E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.75E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    70001, t (us)=   40.4, np=    317385     173679      44091      90847     117939
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.92E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.23E+02  , Ek_w (eV)=   3.20E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.78E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    72501, t (us)=   41.9, np=    316015     173034      44475      90706     117926
+ Pwall (W)=  -2.72E+04, Pabs (W)=   5.95E+04, Pcoll (W)=  -3.28E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.20E+02    5.19E+02  , Ek_w (eV)=   3.18E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.70E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    75001, t (us)=   43.3, np=    316266     173369      44544      90628     117933
+ Pwall (W)=  -2.74E+04, Pabs (W)=   5.96E+04, Pcoll (W)=  -3.29E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.20E+02    5.20E+02  , Ek_w (eV)=   3.19E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.80E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    77501, t (us)=   44.8, np=    316894     174372      44810      90497     118297
+ Pwall (W)=  -2.75E+04, Pabs (W)=   6.01E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.20E+02    5.18E+02  , Ek_w (eV)=   3.21E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.78E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    80001, t (us)=   46.2, np=    316271     173949      45018      90484     118101
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.96E+04, Pcoll (W)=  -3.29E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.22E+02    5.24E+02  , Ek_w (eV)=   3.19E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.77E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    82501, t (us)=   47.6, np=    315918     173774      45095      90455     118062
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.98E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.22E+02    5.22E+02  , Ek_w (eV)=   3.20E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.84E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    85001, t (us)=   49.1, np=    316087     173567      45228      90613     118283
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.22E+02  , Ek_w (eV)=   3.21E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.84E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    87501, t (us)=   50.5, np=    314687     172768      45549      90563     117983
+ Pwall (W)=  -2.74E+04, Pabs (W)=   5.93E+04, Pcoll (W)=  -3.28E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.21E+02  , Ek_w (eV)=   3.20E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.83E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    90001, t (us)=   52.0, np=    312975     171318      45744      90834     117614
+ Pwall (W)=  -2.71E+04, Pabs (W)=   5.88E+04, Pcoll (W)=  -3.25E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.17E+02    5.17E+02  , Ek_w (eV)=   3.19E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.85E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    92501, t (us)=   53.4, np=    312894     171891      45860      90723     117371
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.29E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.20E+02  , Ek_w (eV)=   3.21E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.80E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    95001, t (us)=   54.9, np=    312814     172408      45847      90623     116905
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.29E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.21E+02  , Ek_w (eV)=   3.20E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.88E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=    97501, t (us)=   56.3, np=    314775     174434      46040      90207     117454
+ Pwall (W)=  -2.75E+04, Pabs (W)=   6.02E+04, Pcoll (W)=  -3.33E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.18E+02    5.18E+02  , Ek_w (eV)=   3.22E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.78E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   100001, t (us)=   57.8, np=    315144     174442      46056      90488     117446
+ Pwall (W)=  -2.78E+04, Pabs (W)=   6.03E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.24E+02  , Ek_w (eV)=   3.21E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.83E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   102501, t (us)=   59.2, np=    314821     173270      46109      90804     117765
+ Pwall (W)=  -2.74E+04, Pabs (W)=   5.92E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.23E+02  , Ek_w (eV)=   3.20E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.87E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   105001, t (us)=   60.6, np=    316312     174449      46005      90940     118178
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.10E+04, Pcoll (W)=  -3.34E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.19E+02  , Ek_w (eV)=   3.22E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.91E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   107501, t (us)=   62.1, np=    316741     174669      46182      91116     118386
+ Pwall (W)=  -2.78E+04, Pabs (W)=   6.03E+04, Pcoll (W)=  -3.34E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.25E+02    5.25E+02  , Ek_w (eV)=   3.22E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.79E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   110001, t (us)=   63.5, np=    315868     173312      46167      91432     118555
+ Pwall (W)=  -2.76E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.24E+02    5.24E+02  , Ek_w (eV)=   3.18E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.89E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   112501, t (us)=   65.0, np=    315561     173359      46124      91303     118227
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.29E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.22E+02    5.22E+02  , Ek_w (eV)=   3.20E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.97E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   115001, t (us)=   66.4, np=    316041     173966      46211      91338     117997
+ Pwall (W)=  -2.77E+04, Pabs (W)=   6.00E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.24E+02  , Ek_w (eV)=   3.21E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.83E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   117501, t (us)=   67.9, np=    315415     173845      46393      91291     117850
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.01E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.25E+02    5.24E+02  , Ek_w (eV)=   3.19E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.87E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   120001, t (us)=   69.3, np=    315462     173436      46186      91437     117946
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.22E+02    5.22E+02  , Ek_w (eV)=   3.20E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.95E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   122501, t (us)=   70.7, np=    316292     174536      46218      91055     118200
+ Pwall (W)=  -2.78E+04, Pabs (W)=   6.05E+04, Pcoll (W)=  -3.34E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.25E+02    5.24E+02  , Ek_w (eV)=   3.22E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.82E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   125001, t (us)=   72.2, np=    315851     174487      46032      90972     117696
+ Pwall (W)=  -2.77E+04, Pabs (W)=   6.01E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.25E+02    5.25E+02  , Ek_w (eV)=   3.21E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -4.00E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   127501, t (us)=   73.6, np=    315372     173321      46051      91102     118315
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.95E+04, Pcoll (W)=  -3.29E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.22E+02    5.21E+02  , Ek_w (eV)=   3.19E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.84E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   130001, t (us)=   75.1, np=    316534     174332      46103      91255     118308
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.04E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.22E+02  , Ek_w (eV)=   3.22E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.87E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   132501, t (us)=   76.5, np=    317486     174713      46094      91270     118571
+ Pwall (W)=  -2.78E+04, Pabs (W)=   6.01E+04, Pcoll (W)=  -3.33E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.26E+02    5.27E+02  , Ek_w (eV)=   3.19E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.91E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   135001, t (us)=   78.0, np=    317428     175121      46086      91299     118418
+ Pwall (W)=  -2.77E+04, Pabs (W)=   6.03E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.26E+02    5.24E+02  , Ek_w (eV)=   3.20E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.95E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   137501, t (us)=   79.4, np=    316226     173521      46237      91426     118659
+ Pwall (W)=  -2.74E+04, Pabs (W)=   5.94E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.24E+02  , Ek_w (eV)=   3.17E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.89E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   140001, t (us)=   80.9, np=    316540     173786      46034      91210     118836
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.03E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.22E+02  , Ek_w (eV)=   3.21E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.91E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   142501, t (us)=   82.3, np=    317439     174691      46003      90965     119166
+ Pwall (W)=  -2.78E+04, Pabs (W)=   6.05E+04, Pcoll (W)=  -3.34E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.26E+02    5.25E+02  , Ek_w (eV)=   3.21E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.96E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   145001, t (us)=   83.7, np=    317472     174332      46064      91101     119348
+ Pwall (W)=  -2.74E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.21E+02  , Ek_w (eV)=   3.18E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.93E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   147501, t (us)=   85.2, np=    317653     174159      46075      91238     119424
+ Pwall (W)=  -2.77E+04, Pabs (W)=   6.04E+04, Pcoll (W)=  -3.33E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.25E+02    5.26E+02  , Ek_w (eV)=   3.20E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.88E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   150001, t (us)=   86.6, np=    318263     174824      45906      91192     119407
+ Pwall (W)=  -2.77E+04, Pabs (W)=   6.02E+04, Pcoll (W)=  -3.34E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.26E+02    5.25E+02  , Ek_w (eV)=   3.19E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.97E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   152501, t (us)=   88.1, np=    318144     174535      45883      91174     119713
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.99E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.22E+02  , Ek_w (eV)=   3.20E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.94E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   155001, t (us)=   89.5, np=    318022     173939      45844      91628     119527
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.01E+04, Pcoll (W)=  -3.33E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.24E+02    5.25E+02  , Ek_w (eV)=   3.19E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.89E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   157501, t (us)=   91.0, np=    317154     173948      46009      91616     119146
+ Pwall (W)=  -2.74E+04, Pabs (W)=   5.98E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.22E+02  , Ek_w (eV)=   3.17E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.88E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   160001, t (us)=   92.4, np=    316221     173044      46104      91717     118843
+ Pwall (W)=  -2.76E+04, Pabs (W)=   5.96E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.25E+02  , Ek_w (eV)=   3.19E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.89E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   162501, t (us)=   93.8, np=    315512     172756      46143      91380     118583
+ Pwall (W)=  -2.74E+04, Pabs (W)=   5.95E+04, Pcoll (W)=  -3.28E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.23E+02  , Ek_w (eV)=   3.19E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.86E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   165001, t (us)=   95.3, np=    316610     174423      46191      91293     118429
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.04E+04, Pcoll (W)=  -3.35E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.24E+02    5.23E+02  , Ek_w (eV)=   3.21E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.94E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   167501, t (us)=   96.7, np=    316495     173746      46081      91571     118565
+ Pwall (W)=  -2.74E+04, Pabs (W)=   5.96E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.22E+02  , Ek_w (eV)=   3.18E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.94E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   170001, t (us)=   98.2, np=    315347     173014      46224      91628     118147
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.29E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.24E+02    5.24E+02  , Ek_w (eV)=   3.18E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.86E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   172501, t (us)=   99.6, np=    317499     174314      46141      91595     118874
+ Pwall (W)=  -2.77E+04, Pabs (W)=   6.06E+04, Pcoll (W)=  -3.35E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.22E+02    5.22E+02  , Ek_w (eV)=   3.22E+01    1.86E+01
+ Neg. ion current lost through collisions (A)= -3.96E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   175001, t (us)=  101.1, np=    317223     174176      45973      91381     118974
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.00E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.25E+02    5.24E+02  , Ek_w (eV)=   3.20E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.98E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   177501, t (us)=  102.5, np=    316586     173815      45948      91344     118635
+ Pwall (W)=  -2.77E+04, Pabs (W)=   6.01E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.24E+02    5.25E+02  , Ek_w (eV)=   3.20E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.94E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   180001, t (us)=  104.0, np=    317824     174746      45789      91530     118771
+ Pwall (W)=  -2.77E+04, Pabs (W)=   6.08E+04, Pcoll (W)=  -3.34E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.24E+02    5.23E+02  , Ek_w (eV)=   3.22E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.96E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.7, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   182501, t (us)=  105.4, np=    317361     174154      45864      91565     118661
+ Pwall (W)=  -2.76E+04, Pabs (W)=   5.96E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.24E+02  , Ek_w (eV)=   3.19E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.86E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   185001, t (us)=  106.8, np=    316152     173202      45985      91525     118672
+ Pwall (W)=  -2.73E+04, Pabs (W)=   5.92E+04, Pcoll (W)=  -3.28E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.22E+02    5.21E+02  , Ek_w (eV)=   3.19E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.87E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   187501, t (us)=  108.3, np=    316464     174385      46095      91312     118195
+ Pwall (W)=  -2.77E+04, Pabs (W)=   6.05E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.25E+02    5.24E+02  , Ek_w (eV)=   3.21E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.90E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   190001, t (us)=  109.7, np=    316977     174346      46035      91220     118614
+ Pwall (W)=  -2.74E+04, Pabs (W)=   5.96E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.20E+02    5.21E+02  , Ek_w (eV)=   3.20E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.92E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   192501, t (us)=  111.2, np=    317094     174297      45799      91513     118374
+ Pwall (W)=  -2.74E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.22E+02  , Ek_w (eV)=   3.19E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.92E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   195001, t (us)=  112.6, np=    318040     174832      45830      91588     118566
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.99E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.23E+02  , Ek_w (eV)=   3.20E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.88E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   197501, t (us)=  114.1, np=    317119     173851      45857      91399     118937
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.98E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.22E+02  , Ek_w (eV)=   3.17E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.91E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.6, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   200001, t (us)=  115.5, np=    316677     173890      45887      91234     118610
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.96E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.23E+02  , Ek_w (eV)=   3.20E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.97E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   202501, t (us)=  117.0, np=    316715     174165      45703      91078     118369
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.02E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.23E+02  , Ek_w (eV)=   3.21E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.98E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   205001, t (us)=  118.4, np=    317445     174180      45803      91319     118776
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.99E+04, Pcoll (W)=  -3.33E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.22E+02  , Ek_w (eV)=   3.20E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.93E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   207501, t (us)=  119.8, np=    315820     172602      45891      91412     118721
+ Pwall (W)=  -2.73E+04, Pabs (W)=   5.93E+04, Pcoll (W)=  -3.27E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.22E+02    5.22E+02  , Ek_w (eV)=   3.17E+01    1.82E+01
+ Neg. ion current lost through collisions (A)= -3.89E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   210001, t (us)=  121.3, np=    315628     172867      45877      91292     118351
+ Pwall (W)=  -2.73E+04, Pabs (W)=   5.94E+04, Pcoll (W)=  -3.27E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.19E+02    5.19E+02  , Ek_w (eV)=   3.20E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.91E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   212501, t (us)=  122.7, np=    315796     173622      45712      91081     117985
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.22E+02  , Ek_w (eV)=   3.19E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.93E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   215001, t (us)=  124.2, np=    316198     173760      45548      90991     118278
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.02E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.22E+02  , Ek_w (eV)=   3.22E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.99E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   217501, t (us)=  125.6, np=    316758     173942      45670      91354     118336
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.00E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.22E+02    5.22E+02  , Ek_w (eV)=   3.20E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.94E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   220001, t (us)=  127.1, np=    317819     174651      45605      91469     118558
+ Pwall (W)=  -2.78E+04, Pabs (W)=   6.04E+04, Pcoll (W)=  -3.33E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.24E+02    5.24E+02  , Ek_w (eV)=   3.21E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.93E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.7
+ Backing up simulation data ...
+ Done!
+ it=   222501, t (us)=  128.5, np=    317999     174877      45619      91379     118668
+ Pwall (W)=  -2.78E+04, Pabs (W)=   6.04E+04, Pcoll (W)=  -3.34E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.27E+02    5.26E+02  , Ek_w (eV)=   3.20E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.83E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   225001, t (us)=  129.9, np=    318012     174679      45576      91430     118541
+ Pwall (W)=  -2.76E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.24E+02  , Ek_w (eV)=   3.19E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.99E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   227501, t (us)=  131.4, np=    317344     174864      45539      91065     118369
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.00E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.26E+02    5.24E+02  , Ek_w (eV)=   3.19E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.93E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   230001, t (us)=  132.8, np=    317207     174463      45604      91174     118468
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.97E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.24E+02  , Ek_w (eV)=   3.20E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.88E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   232501, t (us)=  134.3, np=    315513     173219      45967      91258     118361
+ Pwall (W)=  -2.73E+04, Pabs (W)=   5.95E+04, Pcoll (W)=  -3.27E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.21E+02  , Ek_w (eV)=   3.17E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.81E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   235001, t (us)=  135.7, np=    316218     174080      46152      91407     118185
+ Pwall (W)=  -2.75E+04, Pabs (W)=   6.02E+04, Pcoll (W)=  -3.31E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.22E+02  , Ek_w (eV)=   3.20E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.88E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   237501, t (us)=  137.2, np=    317212     174486      46175      91365     118765
+ Pwall (W)=  -2.77E+04, Pabs (W)=   6.00E+04, Pcoll (W)=  -3.34E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.24E+02    5.24E+02  , Ek_w (eV)=   3.20E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.94E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   240001, t (us)=  138.6, np=    316863     174601      46181      91510     118383
+ Pwall (W)=  -2.76E+04, Pabs (W)=   6.04E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.24E+02    5.23E+02  , Ek_w (eV)=   3.20E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.95E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   242501, t (us)=  140.1, np=    316303     173795      46177      91446     118564
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.96E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.24E+02  , Ek_w (eV)=   3.19E+01    1.83E+01
+ Neg. ion current lost through collisions (A)= -3.98E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   245001, t (us)=  141.5, np=    316080     173693      46145      91347     118358
+ Pwall (W)=  -2.76E+04, Pabs (W)=   5.98E+04, Pcoll (W)=  -3.30E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.23E+02    5.24E+02  , Ek_w (eV)=   3.19E+01    1.84E+01
+ Neg. ion current lost through collisions (A)= -3.94E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
+ Backing up simulation data ...
+ Done!
+ it=   247501, t (us)=  142.9, np=    316587     173947      46173      91683     118393
+ Pwall (W)=  -2.75E+04, Pabs (W)=   5.99E+04, Pcoll (W)=  -3.32E+04, Pinj (W)=   0.00E+00, I_w (A)=  -5.21E+02    5.21E+02  , Ek_w (eV)=   3.21E+01    1.85E+01
+ Neg. ion current lost through collisions (A)= -3.93E+01
+ <t> (ms): E/rho=     1.4, poisson=    12.5, sorting=     0.4, avg/write=     0.6, MC=     1.7, mover=     4.0, bck=     0.0, total=    20.8
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 1 PID 840645 RUNNING AT si-server.selkirk.ca
+=   RANK 0 PID 46178 RUNNING AT si-server.selkirk.ca
 =   KILLED BY SIGNAL: 9 (Killed)
 ===================================================================================
 
-real	29m31.902s
-user	883m41.715s
-sys	1m35.437s
- Total calculation time : 29 min 32 sec
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 46179 RUNNING AT si-server.selkirk.ca
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
