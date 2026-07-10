@@ -1,7 +1,7 @@
 program convert
   implicit none
   integer:: i,ix,iy,nx,ny,nx_new,n1,n2,np,ic,nfiles,flag_read,flag,every
-  parameter (n1=15000, n2=1)
+  parameter (n1=1000, n2=1000)
   real(kind=8):: ni(0:n1,0:n2,2),time,th(0:n1,0:n2)
   character:: name*20,dummy
 
