@@ -1,4 +1,4 @@
-Sdeuterium.dat 0 0.9 ! name of file storing reactions, ionization scheme (0: preserve energy & mom, 1: fixed repartition), Ek ratio for elec.
+Shydrogen.dat 0 0.9 ! name of file storing reactions, ionization scheme (0: preserve energy & mom, 1: fixed repartition), Ek ratio for elec.
 7. ! Te (eV) 
 7 ! # of levels in MG solver
 1.d-8 ! Min. precision in residual
