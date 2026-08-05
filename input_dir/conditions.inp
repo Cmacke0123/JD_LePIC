@@ -19,7 +19,7 @@ s 2Dzoom512_32 1. 75. Bz 8. 39. 0. ! ext. file (y/n/s), name, scaling, B(G)(<0 m
 20 ! np_cell: number of particles per cell (<0 for no background plasma)
 5 ! Number of wall labels
 2500 ! Frequency for saving data (<0 does not reset averaging)
-2500 100 0 100.e-6 ! Frequency for simulation backup (<0 no averaging), # of plots (<0 off), time window [t1,t2]
+2500 -100 0 100.e-6 ! Frequency for simulation backup (<0 no averaging), # of plots (<0 off), time window [t1,t2]
 1 ! Size ratio of arrays used for saving data
 36000.d0 ! k_eps0 
 no 1 0. 26.  1  0. 26. ! Save pdf (y/n), ptype, yl & yr (cm), # of regions n_rg, xl & xr (cm) for each n_rg

@@ -1383,7 +1383,7 @@ REACTION
 DISSOCIATION
 Entry #39
 Phelps, private comm. and Phelps 1990
-Phelps comments: We assume that this produces a H3+ ion and an H atom at zero energy)
+Phelps comments: We assume that this produces a H3+ ion and an H atom at zero energy
 Note that the process is exothermic
 Elab (eV), Q[m^2], H2+ + H2 -> H3+ + H, H3+ form., 0 eV
 ----------------------------
@@ -2182,8 +2182,6 @@ Ecm(eV), Q (m^2), threshold energy: 1.003 eV
 100	5.17584E-21
 10000	9.5E-23
 -------------------------------
-
-
 
 REACTION
 [e]+[H-]->[e]+[e]+[H]
