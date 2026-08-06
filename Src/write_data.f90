@@ -242,10 +242,10 @@ subroutine write_data(it,time,n,na,h,p_mac,P_loss,phi_avg,data_pavg,ntype,&
                  strg='no'
                  if(ptype.eq.ntype) strg='yes'
                  if(icol.le.p_ncol(ptype)) then
-                    write(14,'((i3,1x,es15.8))',advance=strg) sig_list(ptype,icol), &
+                    write(14,'((i4,1x,es15.8))',advance=strg) sig_list(ptype,icol), &
                          cnt_col_tmp(1,sig_list(ptype,icol),i_rg)
                  else
-                    write(14,'((i3,1x,es15.8))',advance=strg) 0,0.
+                    write(14,'((i4,1x,es15.8))',advance=strg) 0,0.
                  endif
               enddo
            enddo
